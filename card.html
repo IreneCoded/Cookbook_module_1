@@ -125,6 +125,24 @@ td:nth-child(even), th:nth-child(even){
     cursor: pointer;
 }
 
+.favorit{
+    color:#A81F1F;
+    -webkit-text-stroke-width: 0px;
+}
+
+.ausblenden{
+    height: 0px;
+    overflow:hidden;
+}
+
+.ausklappen{
+    width: 50px;
+    height: 50px;
+    margin-bottom: -50px;
+    background-color: white;
+
+}
+
 </style>
 </head>
 <body>
@@ -139,7 +157,7 @@ td:nth-child(even), th:nth-child(even){
         <p><span class="icons"><i class="fas fa-users"></i></span> 5 Servings</p>
         <p><b><span class="icons"><i class="fas fa-clock"></i></span></b> 10 Minutes</p>
     </div>
-    <i class="fas fa-heart fa-2x iconsHeart"></i> 
+    <i class="fas fa-heart fa-2x iconsHeart" onclick="favorit()"></i> 
 </div>
 
         <div class="hoverEffekt">
@@ -147,7 +165,7 @@ td:nth-child(even), th:nth-child(even){
             <div class="overlay">Just a short discription of the best Tea you would ever get!</div>
             </div>
 
-
+        <div class="ausblenden"> 
         <table>
              <!-- First the Headline of the table -->
              <tr>
@@ -175,12 +193,15 @@ td:nth-child(even), th:nth-child(even){
 
          <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
 
-           
+        </div>    
          
-                
+         <div class="ausklappen">
+            <p>+</p> 
+         </div>       
 
 
     </article>
+    
     
    
    
@@ -189,6 +210,13 @@ td:nth-child(even), th:nth-child(even){
  
 
 </section> 
-    
+ <script>
+     function favorit(){
+         let favorit = document.querySelector(".iconsHeart");
+         favorit.classList.toggle("favorit");
+
+     }
+
+ </script>   
 </body>
 </html>
