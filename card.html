@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>example Card</title>
     <style>
+
+    
         @font-face {
     font-family: 'Glyphter';
     src: url('fonts/Glyphter.eot');
@@ -17,19 +19,79 @@
     font-style: normal;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #DEAA6E;
+}
+
+article{
+    max-width: 25%;
+    margin: 40px 20px;
+    
+    background-color: white;
+    padding: 10px 20px;
+    }
+
+article  img {
+    opacity: 1;
+  display: block;
+  width: 100%;
+  height: 200px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.hoverEffekt:hover  img{
+    opacity: 0.5;
+}
+
+.overlay {
+    transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: -200px;;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  Padding: 40px
+
+    
+}
+
+.hoverEffekt:hover  .overlay{
+    opacity: 1;
+}
+
+
+article>table{
+    width: 100%;
+    text-align: center;
+    
+  border-collapse: collapse;
+}
+
 .icons{
     font-family: 'Glyphter';
 }
 
-table{
-    border: 1px solid black;
-}
+
     </style>
 
 
 
 </head>
 <body>
+
+    <section>
     <article>
         <h2>Fabulous Dish</h2>
 
@@ -37,7 +99,10 @@ table{
         <p><span class="icons">B</span> 5 Portions</p>
         <p><b><span class="icons">C</span></b> 10 Minutes</p>
 
-        <img src="https://picsum.photos/200/200/?blur=4" alt="photo">
+        <div class="hoverEffekt">
+            <img src="https://picsum.photos/200/505/?blur=4" alt="photo">
+            <div class="overlay">testtesttest</div>
+            </div>
 
 
         <table>
@@ -67,12 +132,454 @@ table{
 
          <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
 
-             
+           
          
                 
 
 
     </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/400/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/200/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/200/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/200/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/200/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/200/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/210/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/202/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/220/300/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+    <article>
+        <h2>Fabulous Tea</h2>
+
+        <p class="icons"><span style="color:green">AAA</span>AA</p>
+        <p><span class="icons">B</span> 5 Portions</p>
+        <p><b><span class="icons">C</span></b> 10 Minutes</p>
+        <div class="hoverEffekt">
+        <img src="https://picsum.photos/500/500/?blur=4" alt="photo">
+        <div class="overlay">testtesttest</div>
+        </div>
+
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           
+         
+                
+
+
+    </article>
+
+</section> 
     
 </body>
 </html>
