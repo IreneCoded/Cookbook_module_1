@@ -131,17 +131,64 @@ td:nth-child(even), th:nth-child(even){
 }
 
 .ausblenden{
-    height: 0px;
+    transform:scaleY(0); 
     overflow:hidden;
+
+
 }
 
+.trans {
+    -webkit-transition: all 1s ease-in;
+-moz-transition: all 1s ease-in;
+-ms-transition: all 1s ease-in;
+transition: all 1s ease-in;
+-o-transition: all 1s ease-in;
+}
+
+.wachsen{
+    transition: all 1s ease-in-out;
+    transform:scaleY(1); 
+    transform-origin: top;
+
+}
+
+.contgrow{
+    height:0;
+}
+
+.contgrowBig{
+    min-height: 200px;
+    max-height:2000px;
+}
+
+.contgrowRight{
+    height:auto;
+}
+#minus{
+    display: none;
+}
 .ausklappen{
     width: 50px;
     height: 50px;
-    margin-bottom: -50px;
+    margin: 0 auto;
+    margin-bottom: -25px;
+    margin-left:auto;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    cursor: pointer;
 
 }
+
+.ausklappen h3{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+
 
 </style>
 </head>
@@ -165,7 +212,9 @@ td:nth-child(even), th:nth-child(even){
             <div class="overlay">Just a short discription of the best Tea you would ever get!</div>
             </div>
 
-        <div class="ausblenden"> 
+        
+        <div class="contgrow trans">
+           <div id= "versuch" class="ausblenden trans"> 
         <table>
              <!-- First the Headline of the table -->
              <tr>
@@ -193,22 +242,16 @@ td:nth-child(even), th:nth-child(even){
 
          <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
 
-        </div>    
-         
-         <div class="ausklappen" onclick ="ausklappen()">
-            <p>+</p> 
+           </div>    
+        </div>
+         <div class="ausklappen" onclick ="ausklappen(this)">
+            <h3 id="plus">+</h3> 
+            <h3 id="minus">&ndash;</h3>
          </div>       
 
 
     </article>
     
-    
-   
-   
-
- 
- 
-
 </section> 
  <script>
      function favorit(){
@@ -217,10 +260,31 @@ td:nth-child(even), th:nth-child(even){
 
      }
 
-     function ausklappen(){
-         let tabelle = document.querySelector(".ausblenden");
-         tabelle.style.height="auto";
-     }
+     function ausklappen(schalter){
+         let tabelle = document.getElementById("versuch");
+         let beschreibung= document.querySelector(".contgrow")
+
+         tabelle.classList.toggle("wachsen");
+         beschreibung.classList.toggle("contgrowBig");
+
+         setTimeout(function(){ beschreibung.classList.toggle("contgrowRight"); }, 900);
+         
+
+
+         let knopf1 = document.querySelector("#plus");
+         let knopf2 = document.querySelector("#minus");
+         if (knopf1.style.display === "none") {
+             knopf1.style.display = "inline";
+             knopf2.style.display = "none";
+         } else {
+            knopf1.style.display = "none";
+            knopf2.style.display = "inline";
+  }
+}
+
+
+
+    
 
  </script>   
 </body>
