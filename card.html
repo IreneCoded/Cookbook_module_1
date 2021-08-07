@@ -74,7 +74,7 @@ article  img {
 }
 
 
-article>table{
+article table{
     width: 100%;
     text-align: center;
     
@@ -195,7 +195,7 @@ td:nth-child(even), th:nth-child(even){
 
         </div>    
          
-         <div class="ausklappen">
+         <div class="ausklappen" onclick ="ausklappen()">
             <p>+</p> 
          </div>       
 
@@ -215,6 +215,11 @@ td:nth-child(even), th:nth-child(even){
          let favorit = document.querySelector(".iconsHeart");
          favorit.classList.toggle("favorit");
 
+     }
+
+     function ausklappen(){
+         let tabelle = document.querySelector(".ausblenden");
+         tabelle.style.height="auto";
      }
 
  </script>   
