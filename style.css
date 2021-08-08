@@ -123,30 +123,23 @@ color:#A81F1F;
 -webkit-text-stroke-width: 0px;
 }
 
-.ausblenden{
-transform:scaleY(0); 
-overflow:hidden;
 
 
-}
+
 
 .trans {
--webkit-transition: all 1s ease-in;
--moz-transition: all 1s ease-in;
--ms-transition: all 1s ease-in;
-transition: all 1s ease-in;
--o-transition: all 1s ease-in;
+-webkit-transition: all 2s ease-in;
+-moz-transition: all 2s ease-in;
+-ms-transition: all 2s ease-in;
+transition: all 2s ease-in;
+-o-transition: all 2s ease-in;
 }
 
-.wachsen{
-transition: all 1s ease-in-out;
-transform:scaleY(1); 
-transform-origin: top;
 
-}
 
 .contgrow{
 max-height:0;
+overflow:hidden;
 }
 
 .contgrowBig{

@@ -12,13 +12,10 @@ function ausklappen(schalter){
 
     //selects the element above the pressed button a div which is only there to hide the table and the recipe
     let tabelle = schalter.previousElementSibling;
-   // selects the first in the hidden div (also a div)
-   let beschreibung= tabelle.firstElementChild;
     
 
-    //adds/remove a class to both of the hidden divs
+    //adds/remove a class to the hidden div
     tabelle.classList.toggle("contgrowBig");
-    beschreibung.classList.toggle("wachsen");
 
     
     // selects ony the h3 in the pressed element, checks with one is displayd and changes the statur of visibility
@@ -26,8 +23,8 @@ function ausklappen(schalter){
     let knopf1 = schalter.firstElementChild;
     let knopf2 = schalter.lastElementChild;
     
-    console.log(knopf1);
-    console.log(knopf2);
+    //if the plus button is not visible, it will be given a proper display and the minus button is set to display none.
+    //else: vice versa
     if (knopf1.style.display === "none") {
         knopf1.style.display = "inline";
         knopf2.style.display = "none";
