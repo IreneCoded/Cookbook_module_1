@@ -6,191 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>example Card</title>
-    <style>
+   <link rel="stylesheet" href="style.css">
+   <script type="text/javascript" src="script.js"></script>
 
-    
-        @font-face {
-    font-family: 'Glyphter';
-    src: url('fonts/Glyphter.eot');
-    src: url('fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Glyphter.woff') format('woff'),
-         url('fonts/Glyphter.ttf') format('truetype'),
-         url('fonts/Glyphter.svg#Glyphter') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-section {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #DEAA6E;
-}
-
-article{
-    max-width: 25%;
-    margin: 40px 20px;
-    
-    background-color: white;
-    padding: 10px 20px;
-    }
-
-article  img {
-    margin-top: 20px;
-    opacity: 1;
-  display: block;
-  width: 100%;
-  height: 200px;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.hoverEffekt:hover  img{
-    opacity: 0.5;
-}
-
-.overlay {
-    transition: .5s ease;
-  opacity: 0;
-  position: relative;
-  width: 100%;
-  height: 200px;
-  margin-top: -200px;;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  Padding: 40px
-
-    
-}
-
-.hoverEffekt:hover  .overlay{
-    opacity: 1;
-}
-
-
-article table{
-    width: 100%;
-    text-align: center;
-    
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-article h2{
-    margin-bottom: 0.4em;
-}
-
-.forFlexing{
-    display: flex;
-    justify-content: space-between;
-}
-
-.icons{
-    line-height: 1.6em;
-    letter-spacing: 5px;
-    color:grey;
-}
-
-td:nth-child(even), th:nth-child(even){
-    text-align: left;
-}
-    
-
-.favoriteButton{
-    border: 1px solid grey;
-    height: 50px;
-    width: 50px;
-    font-size: 2.5em;
-    border-radius: 25px;
-    padding:auto;
-    text-align: center;
-    letter-spacing: 0;
-
-}
-
-.iconsHeart{
-    
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: grey;
-    color: white;
-}
-
-.iconsHeart:hover{
-    cursor: pointer;
-}
-
-.favorit{
-    color:#A81F1F;
-    -webkit-text-stroke-width: 0px;
-}
-
-.ausblenden{
-    transform:scaleY(0); 
-    overflow:hidden;
-
-
-}
-
-.trans {
-    -webkit-transition: all 1s ease-in;
--moz-transition: all 1s ease-in;
--ms-transition: all 1s ease-in;
-transition: all 1s ease-in;
--o-transition: all 1s ease-in;
-}
-
-.wachsen{
-    transition: all 1s ease-in-out;
-    transform:scaleY(1); 
-    transform-origin: top;
-
-}
-
-.contgrow{
-    height:0;
-}
-
-.contgrowBig{
-    min-height: 200px;
-    max-height:2000px;
-}
-
-.contgrowRight{
-    height:auto;
-}
-#minus{
-    display: none;
-}
-.ausklappen{
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    margin-bottom: -25px;
-    margin-left:auto;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    cursor: pointer;
-
-}
-
-.ausklappen h3{
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-
-
-</style>
 </head>
 <body>
 
@@ -204,7 +22,7 @@ transition: all 1s ease-in;
         <p><span class="icons"><i class="fas fa-users"></i></span> 5 Servings</p>
         <p><b><span class="icons"><i class="fas fa-clock"></i></span></b> 10 Minutes</p>
     </div>
-    <i class="fas fa-heart fa-2x iconsHeart" onclick="favorit()"></i> 
+    <i class="fas fa-heart fa-2x iconsHeart trans" onclick="favorit(this)"></i> 
 </div>
 
         <div class="hoverEffekt">
@@ -214,7 +32,7 @@ transition: all 1s ease-in;
 
         
         <div class="contgrow trans">
-           <div id= "versuch" class="ausblenden trans"> 
+           <div class="ausblenden trans"> 
         <table>
              <!-- First the Headline of the table -->
              <tr>
@@ -245,8 +63,65 @@ transition: all 1s ease-in;
            </div>    
         </div>
          <div class="ausklappen" onclick ="ausklappen(this)">
-            <h3 id="plus">+</h3> 
-            <h3 id="minus">&ndash;</h3>
+            <h3 class="plus">+</h3> 
+            <h3 class="minus">&ndash;</h3>
+         </div>       
+
+
+    </article>
+
+    <article>
+        <div class="forFlexing">
+        <div>
+        <h2>Fabulous Dish</h2>
+
+        <p class="icons"><span style="color:#A81F1F"><i class="fas fa-utensil-spoon"></i><i class="fas fa-utensil-spoon"></i><i class="fas fa-utensil-spoon"></i></span><i class="fas fa-utensil-spoon"></i><i class="fas fa-utensil-spoon"></i></p>
+        <p><span class="icons"><i class="fas fa-users"></i></span> 5 Servings</p>
+        <p><b><span class="icons"><i class="fas fa-clock"></i></span></b> 10 Minutes</p>
+    </div>
+    <i class="fas fa-heart fa-2x iconsHeart trans" onclick="favorit(this)"></i> 
+</div>
+
+        <div class="hoverEffekt">
+            <img src="https://picsum.photos/200/505/?blur=4" alt="photo">
+            <div class="overlay">Just a short discription of the best Tea you would ever get!</div>
+            </div>
+
+        
+        <div class="contgrow trans">
+           <div class="ausblenden trans"> 
+        <table>
+             <!-- First the Headline of the table -->
+             <tr>
+                 <th>Amount</th>
+                 <th>Ingridient</th>
+             </tr>
+            <!-- Tablecontent - just copy paste more <tr> .. <tr> under that content to get more lines -->
+             <tr>
+                 <td>1 Spoon</td>
+                 <td>Sugar</td>
+             </tr>
+             <tr>
+                <td>1 Teabag</td>
+                <td>Tea as you like it</td>
+             </tr>
+             <tr>
+                <td>1 liter</td>
+                <td>Boiling Water</td>
+             </tr>
+             <tr>
+                <td>1 Slice</td>
+                <td>Lemon optional</td>
+             </tr>
+         </table>
+
+         <p>As recommended: a short description of the dish. Something with a lot of delicous, spicy or anything else that makes our mouth water</p>
+
+           </div>    
+        </div>
+         <div class="ausklappen" onclick ="ausklappen(this)">
+            <h3 class="plus">+</h3> 
+            <h3 class="minus">&ndash;</h3>
          </div>       
 
 
@@ -254,33 +129,6 @@ transition: all 1s ease-in;
     
 </section> 
  <script>
-     function favorit(){
-         let favorit = document.querySelector(".iconsHeart");
-         favorit.classList.toggle("favorit");
-
-     }
-
-     function ausklappen(schalter){
-         let tabelle = document.getElementById("versuch");
-         let beschreibung= document.querySelector(".contgrow")
-
-         tabelle.classList.toggle("wachsen");
-         beschreibung.classList.toggle("contgrowBig");
-
-         setTimeout(function(){ beschreibung.classList.toggle("contgrowRight"); }, 900);
-         
-
-
-         let knopf1 = document.querySelector("#plus");
-         let knopf2 = document.querySelector("#minus");
-         if (knopf1.style.display === "none") {
-             knopf1.style.display = "inline";
-             knopf2.style.display = "none";
-         } else {
-            knopf1.style.display = "none";
-            knopf2.style.display = "inline";
-  }
-}
 
 
 
